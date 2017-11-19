@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+  <head>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Immaculate</title>
+  <meta name="description" content="A beautiful, fast, AMP-compliant Jekyll theme based on Tufte CSS.
+">
+
+  <link rel="canonical" href="https://github.com/siawyoung/immaculate/immaculate/">
+  <link rel="alternate" type="application/rss+xml" title="Immaculate" href="https://github.com/siawyoung/immaculate/immaculate/feed.xml">
+
+  <script type="application/ld+json">
+  
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": "https://github.com/siawyoung/immaculate/immaculate/",
+  "headline": "Immaculate",
+  "datePublished": "2017-11-19T01:23:56-05:00",
+  "dateModified": "2017-11-19T01:23:56-05:00",
+  "description": "A beautiful, fast, AMP-compliant Jekyll theme based on Tufte CSS.
+",
+  "author": {
+    "@type": "Person",
+    "name": "Lau Siaw Young"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Immaculate",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://github.com/siawyoung/immaculate/immaculate",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://github.com/siawyoung/immaculate/immaculate",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+
+  <style amp-custom>
+  
+  /* Import ET Book styles
+   adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
+@font-face {
+  font-family: "et-book";
+  src: url("/immaculate/assets/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+  src: url("/immaculate/assets/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("/immaculate/assets/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("/immaculate/assets/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("/immaculate/assets/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "et-book";
+  src: url("/immaculate/assets/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+  src: url("/immaculate/assets/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("/immaculate/assets/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("/immaculate/assets/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("/immaculate/assets/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+@font-face {
+  font-family: "et-book";
+  src: url("/immaculate/assets/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+  src: url("/immaculate/assets/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("/immaculate/assets/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("/immaculate/assets/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("/immaculate/assets/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("/immaculate/assets/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+  src: url("/immaculate/assets/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("/immaculate/assets/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("/immaculate/assets/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("/immaculate/assets/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Tufte CSS styles */
+html {
+  font-size: 15px; }
+
+body {
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12.5%;
+  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  background-color: #fffff8;
+  color: #111;
+  max-width: 1400px;
+  counter-reset: sidenote-counter; }
+
+h1 {
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  font-size: 3.2rem;
+  line-height: 1; }
+
+h2 {
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 2.1rem;
+  margin-bottom: 0;
+  font-size: 2.2rem;
+  line-height: 1; }
+
+h3 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  line-height: 1; }
+
+p.subtitle {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1; }
+
+.numeral {
+  font-family: et-book-roman-old-style; }
+
+.danger {
+  color: red; }
+
+article {
+  position: relative;
+  padding: 5rem 0rem; }
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+p, ol, ul, .pagination a, .pagination em, table {
+  font-size: 1.4rem; }
+
+p {
+  line-height: 2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  padding-right: 0;
+  vertical-align: baseline; }
+
+/* Chapter Epigraphs */
+div.epigraph {
+  margin: 5em 0; }
+
+div.epigraph > blockquote {
+  margin-top: 3em;
+  margin-bottom: 3em; }
+
+div.epigraph > blockquote, div.epigraph > blockquote > p {
+  font-style: italic; }
+
+div.epigraph > blockquote > footer {
+  font-style: normal; }
+
+div.epigraph > blockquote > footer > cite {
+  font-style: italic; }
+
+/* end chapter epigraphs styles */
+blockquote {
+  font-size: 1.4rem; }
+
+blockquote p {
+  width: 50%; }
+
+blockquote .footer {
+  width: 50%;
+  font-size: 1.1rem;
+  text-align: right; }
+
+ol, ul {
+  width: 45%;
+  -webkit-padding-start: 5%;
+  -webkit-padding-end: 5%; }
+
+li {
+  padding: 0.5rem 0; }
+
+figure {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  max-width: 55%;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  margin: 0 0 3em 0; }
+
+figcaption {
+  float: right;
+  clear: right;
+  margin-right: -48%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  vertical-align: baseline;
+  position: relative;
+  max-width: 40%; }
+
+figure.fullwidth figcaption {
+  margin-right: 24%; }
+
+/* Links: replicate underline that clears descenders */
+a:link, a:visited {
+  color: inherit; }
+
+a:link {
+  text-decoration: none;
+  background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
+  background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+  -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+  background-position: 0% 93%, 100% 93%, 0% 93%; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  a:link {
+    background-position-y: 87%, 87%, 87%; } }
+a:link::selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+a:link::-moz-selection {
+  text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+  background: #b4d5fe; }
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+  max-width: 100%; }
+
+.sidenote, .marginnote {
+  float: right;
+  clear: right;
+  margin-right: -60%;
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  vertical-align: baseline;
+  position: relative; }
+
+.table-caption {
+  float: right;
+  clear: right;
+  margin-right: -60%;
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.0rem;
+  line-height: 1.6; }
+
+.sidenote-number {
+  counter-increment: sidenote-counter; }
+
+.sidenote-number:after, .sidenote:before {
+  content: counter(sidenote-counter) " ";
+  font-family: et-book-roman-old-style;
+  position: relative;
+  vertical-align: baseline; }
+
+.sidenote-number:after {
+  content: counter(sidenote-counter);
+  font-size: 1rem;
+  top: -0.5rem;
+  left: 0.1rem; }
+
+.sidenote:before {
+  content: counter(sidenote-counter) " ";
+  top: -0.5rem; }
+
+p, footer, table, div.table-wrapper-small, div.supertable-wrapper > p, div.booktabs-wrapper {
+  width: 55%; }
+
+div.fullwidth, table.fullwidth {
+  width: 100%; }
+
+div.table-wrapper {
+  overflow-x: auto;
+  font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; }
+
+@media screen and (max-width: 760px) {
+  p, h1, h2, h3, footer {
+    width: 90%; }
+
+  pre.code {
+    width: 87.5%; }
+
+  ul {
+    width: 85%; }
+
+  figure {
+    max-width: 90%; }
+
+  figcaption, figure.fullwidth figcaption {
+    margin-right: 0%;
+    max-width: none; }
+
+  blockquote p, blockquote .footer {
+    width: 90%; } }
+.sans {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  letter-spacing: .03em; }
+
+.code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1.125rem;
+  line-height: 1.6; }
+
+h1 .code, h2 .code, h3 .code {
+  font-size: 0.80em; }
+
+.marginnote .code, .sidenote .code {
+  font-size: 1rem; }
+
+pre.code {
+  width: 52.5%;
+  padding-left: 2.5%;
+  overflow-x: auto; }
+
+.fullwidth {
+  max-width: 90%;
+  clear: both; }
+
+span.newthought {
+  font-variant: small-caps;
+  font-size: 1.2em; }
+
+.margin-toggle {
+  display: none; }
+
+.sidenote-number {
+  display: inline; }
+
+.margin-toggle:not(.sidenote-number) {
+  display: none; }
+
+@media (max-width: 760px) {
+  .margin-toggle:not(.sidenote-number) {
+    display: none; }
+
+  .sidenote, .marginnote {
+    display: none; }
+
+  .margin-toggle:checked + .sidenote,
+  .margin-toggle:checked + .marginnote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative; }
+
+  label {
+    cursor: pointer; }
+
+  pre.code {
+    width: 90%;
+    padding: 0; }
+
+  .table-caption {
+    display: block;
+    float: right;
+    clear: both;
+    width: 98%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1%;
+    margin-right: 1%;
+    vertical-align: baseline;
+    position: relative; }
+
+  div.table-wrapper, table, table.booktabs {
+    width: 85%; }
+
+  div.table-wrapper {
+    border-right: 1px solid #efefef; }
+
+  img {
+    width: 100%; } }
+main {
+  margin-top: 20px; }
+
+amp-img {
+  background-color: grey; }
+
+article {
+  padding: 2.5rem 0; }
+
+header {
+  margin-top: 20px; }
+
+.post-meta {
+  margin-top: 10px; }
+
+pre {
+  width: 52.5%;
+  padding-left: 2.5%;
+  overflow-x: auto; }
+
+@media (max-width: 760px) {
+  pre {
+    width: 90%;
+    padding: 0; } }
+code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 1.125rem;
+  line-height: 1.6; }
+
+  </style>
+
+
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+
+  <body>
+    <header>
+  <div class="page-links">
+    <a class="page-link" href="/immaculate/">Home</a>
+    
+      
+      • <a class="page-link" href="/immaculate/about/">About</a>
+      
+    
+      
+      • <a class="page-link" href="/immaculate/contact/">Contact</a>
+      
+    
+      
+    
+      
+    
+  </div>
+</header>
+
+
+    <main>
+
+  <section>
+      <h1>Immaculate</h1>
+      <h3>A beautiful, fast, AMP-compliant Jekyll theme based on Tufte CSS.
+</h3>
+  </section>
+
+  <div>
+    
+      <article itemscope itemtype="http://schema.org/BlogPosting" role="article">
+
+          <header>
+            <h2 itemprop="name"><a href="/immaculate/a-grad-students-jouney.html" itemprop="url">On receiving advice</a></h2>
+          </header>
+
+          <div class="post-meta">
+            <time datetime="19 November 2017">19 November 2017</time>
+          </div>
+
+          <section itemprop="description">
+            <p>It’s hard to evaluate the advice you receive about making a decision without
+any <em>a priori</em> experience with the choices. How do you even begin to process
+the information you have been given?</p>
+
+<p>I remember the conversation with my undergrad math advisor, Joe. I had come in
+during his office hours to discuss my grad school plans. After two summers of
+research and many courses in between, it was clear that I wanted to study
+applied math. I had come to talk about programs as well as the application
+proces.</p>
+
+<p>I sat down and explained what I wanted to do. I didn’t really come to hear his
+perspective on my choice, since I was just expecting his blessing. Joe had
+always been supportive of my course selections and my summer plans. He had a
+sense for the work that got me excited, and he certainly knew what sort of
+topics, material, and approaches drove me nuts. Joe had always exceeded my
+expectations of him as an advisor, supporting me in many different situations.
+He had even helped to secure a position in the department’s summer research
+program after my major plans had collapsed at the last moment<span id="s1" class="margin-toggle sidenote-number"></span>
+      <span class="sidenote">I might write a post about this story itself.</span>. That affair in particular has
+served as a reminder of the reasons why I am grateful for Joe’s advice and
+support.</p>
+
+<p>But today the support came in a different form entirely. After I shared my
+plans and ideas for the future, Joe paused for a moment. Then, he looked at me
+quite directly and said, “You have to be careful with applied math. It
+frequently isn’t what you think, and I’m not sure if you will like it.”</p>
+
+<p>I was taken aback. He continued: “When people say they do ‘applied math,’ it
+can mean a whole array of different things. Some people spend a whole career
+studying one type of PDE and call it ‘applied math.’ Others write code all day
+for a living. That can be ‘applied math,’ too.” He then asked me what I wanted
+to do <em>inside</em> applied math.</p>
+
+<p>My goal, I explained to him, was to find a way to balance my interest in
+“mathematics,” (i.e., abstraction, deduction, proof) with my interest in
+“computation,” (i.e., algorithms, programming, applications). Noting the work
+by the resident applied mathematician in the department, I said that I wanted
+to find a way to be a “mathematician” in an applied setting, much like that
+professor had managed to be.</p>
+
+<p>Joe said that was a laudable goal. But he repeated his warning to me that I be
+careful in how I proceed.</p>
+
+<p>I applied to about twenty programs and was accepted by eight. My first formal
+acceptance was at Stony Brook, but it was soon followed by others. I spoke to
+faculty on the phone, had Skype interviews, and visited a few of the schools in
+person. All the while, my relief in simply <em>being</em> accepted in the first place
+was still present in my mind. At campus visits, I learned about active areas of
+research that faculty pursued. Yes, many professors seemd to be studying PDEs
+all day, and there was a lot of software development work at the schools I
+visited, but nothing seemed outside of my interest.</p>
+
+<p>When I Skyped with the Stony Brook professors, they asked me where I should
+like to be placed as a PhD student. The department of applied
+mathematics and statistics (AMS) is divided into five primary research areas:
+computational applied mathematics, operations research, statistics,
+quantitative finance, and mathematical biology. After prefacing that I did
+<em>not</em> have a firm sense of the problems I wanted to study, I suggested that I
+was interested in topics in numerical analysis and possibly optimization. The
+professors (one of whom seeming annoyed that I didn’t have a research area in
+mind already) recommended that I join the computational applied mathematics
+area. It was a fairly general area with faculty studying a wide range of
+problems, they said. I had no objections, so I agreed.</p>
+
+<p>I eventually accepted the offer from Stony Brook. Late into the semester, I
+started carefully examining the programs and courses the AMS department
+provided, and it set off one major red flag: they lacked analysis courses. The
+two schools I had visited in person both maintained the expectation of a
+rigorous background in mathematical analysis from its PhD students, but the AMS
+department at Stony Brook did not.</p>
+
+<p>Worried, I went and talked to the applied mathematician in the department. He
+gave me some pearls of sage advice:</p>
+
+<ul>
+  <li>It is hard to learn meaningful information about a collection of courses from
+a department-maintained web page.</li>
+  <li>If I desperately need to study analysis, there will certainly be courses
+available to do so.</li>
+  <li>I am not bound, as a mathematician and researcher, to continue in the
+topics and areas of research that form my doctoral thesis.</li>
+</ul>
+
+<p>I have thought about this advice a few times a week since starting my grad
+program.</p>
+
+<h2 id="advice-is-difficult-to-process-but-worth-recording-and-revisiting">Advice is difficult to process but worth recording and revisiting</h2>
+
+<p>Both of my professors were correct, of course. I am indebted to their
+willingness to take my concerns and provide honest guidance. Even when I didn’t
+understand what the guidance meant at the time. I’m sure I don’t understand it
+fully now, either.</p>
+
+<p>It became clear that the computational applied mathematics research area was a
+poor fit for me. Many students obtain PhDs for work comprised of almost
+entirely software engineering. Very few topics we have studied so far in the
+area’s courses have much in the way of rigor, abstraction, and proof. I feel as
+if this semester has possibly detrimented my abilities (and frankly, my
+confindence) as a potential mathematician.</p>
+
+<p>I certainly don’t begrudge others for studying in this area. What does and
+doesn’t work for me need not be prescribed for everyone else. But I did have
+some rough weeks this semester, where I spent most of my time worrying that I
+had made an irreparable mistake in embarking on applied math. I considered
+transferring to the mathematics department, or even dropping out and reapplying
+to pure math programs.</p>
+
+<p>It turns out, however, that as much as computational applied math isn’t for me,
+there are other places in the department that work much closer to my interests
+and values. I’ve moved to operations research, and I am much happier with the
+faculty. I am very excited for next semester’s courses. I am in a somewhat
+tricky place regarding the first qualifying exam, since I will be taking a test
+on material I missed this semester, but it is a surmountable obstacle. I
+frankly enjoy reviewing the new material far more than I’ve enjoyed any of the
+course work from this semester.</p>
+
+<p>Joe’s warning became relevant far faster than I had anticipated, but I was
+grateful to have heard it. It helped me process the situation that I found
+myself in and give me a sense of context when I was fighting a deep bout of
+tunnel vision.</p>
+
+<p>That’s kind of the point, though. Good advice comes from experience, providing
+clarity when the recipient is entirely uncertain. I could
+rely on Joe’s perspective when mine was sufficiently blocked from seeing the
+big picture. I could think about the long run, the difference between real and
+petty concerns, because someone had given me permission to, and I knew it would
+be okay. Sometimes that’s a huge victory.</p>
+
+
+          </section>
+
+      </article>
+    
+      <article itemscope itemtype="http://schema.org/BlogPosting" role="article">
+
+          <header>
+            <h2 itemprop="name"><a href="/immaculate/immaculate-showcase.html" itemprop="url">Immaculate Showcase</a></h2>
+          </header>
+
+          <div class="post-meta">
+            <time datetime="30 March 2016">30 March 2016</time>
+          </div>
+
+          <section itemprop="description">
+            <p>This is an example post showcasing the various features of <a href="https://github.com/siawyoung/immaculate">Immaculate</a> and <a href="https://github.com/edwardtufte/tufte-css">Tufte CSS</a>. Refer to the Markdown source of this post for a better understanding!</p>
+
+<p>And please feel free to modify Immaculate’s template files to your liking. Immaculate is extremely minimal as far as usual blogging features are concerned.</p>
+
+<h1 id="this-is-a-h1">This is a H1.</h1>
+
+<h2 id="this-is-a-h2">This is a H2.</h2>
+
+<h3 id="and-this-is-a-h3-lower-levels-are-not-supported">And this is a H3. Lower levels are not supported.</h3>
+
+<p>Here is a <strong>bold</strong>, an <em>italic</em>, and a <a href="/#">hyperlink</a>.</p>
+
+<p>Now, presenting to you a block quote with a Tufte-styled footer:</p>
+
+<blockquote>
+  <p>But say, my brothers, what can the child do that even the lion could not do? Why must the preying lion still become a child? The child is innocence and forgetting, a new beginning, a game, a self-propelled wheel, a first movement, a sacred “Yes.” For the game of creation, my brothers, a sacred “Yes” is needed: the spirit now wills his own will, and he who had been lost to the world now conquers the world.</p>
+  <p class="footer">Friedrich Nietzsche, Thus Spoke Zarathustra</p>
+</blockquote>
+
+<p>This is a normal-sized image.</p>
+
+<figure>
+  <amp-img width="600" height="400" layout="responsive" src="/immaculate/assets/images/sushi.jpg"></amp-img>
+</figure>
+
+<p>This is a full-width image.</p>
+
+<figure class="fullwidth">
+  <amp-img width="1400" height="933" layout="responsive" src="/immaculate/assets/images/sf.jpg"></amp-img>
+</figure>
+
+<p>(All images mine.)</p>
+
+<p>This is a Youtube video.</p>
+
+<figure>
+  <amp-youtube data-videoid="lBTCB7yLs8Y" layout="responsive" width="600" height="300"></amp-youtube>
+</figure>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<span id="side1" class="margin-toggle sidenote-number"></span>
+      <span class="sidenote">This is a sidenote.</span> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur<span id="side2" class="margin-toggle sidenote-number"></span>
+      <span class="sidenote">This is another sidenote.</span> sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p><span class="marginnote">This is a margin note.</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p><span class="marginnote">Yet another margin note.</span></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Here is a code block<span id="side3" class="margin-toggle sidenote-number"></span>
+      <span class="sidenote">I have not turned on syntax highlighting. Frankly, it can be distracting in this minimalistic environment.</span>:</p>
+
+<div class="highlighter-rouge">
+  <pre class="highlight"><code><span class="k">class</span> <span class="n">beautiful_ruby_class</span>
+  <span class="k">def</span> <span class="nf">initialize</span>
+    <span class="n">do_some_magical_stuff</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">beautiful_method</span>
+    <span class="n">change_the_world</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+          </section>
+
+      </article>
+    
+  </div>
+
+  <nav role="navigation">
+    
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+   <section class="copyright">All content copyright <a href="mailto:">Lau Siaw Young</a> &copy; 2017 &bull; All rights reserved.</section>
+</footer>
+
+
+  </body>
+</html>

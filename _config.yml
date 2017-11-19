@@ -1,7 +1,7 @@
 title: asdf
 description: >
     Purely applied math, with friends
-baseurl: "/"
+baseurl: "/immaculate/"
 url: "https://github.com/violaguy/"
 paginate:	2 # The number of posts to show per page on your homepage
 name: "David Kraemer"

@@ -20,8 +20,8 @@ sense for the work that got me excited, and he certainly knew what sort of
 topics, material, and approaches drove me nuts. Joe had always exceeded my
 expectations of him as an advisor, supporting me in many different situations.
 He had even helped to secure a position in the department's summer research
-program after my major plans had collapsed at the last moment{% sidenote s1 I
-might write a post about this story itself. %}. That affair in particular has
+program after my major plans had collapsed at the last moment <!--{% sidenote s1 I
+might write a post about this story itself. %}-->. That affair in particular has
 served as a reminder of the reasons why I am grateful for Joe's advice and
 support.
 
